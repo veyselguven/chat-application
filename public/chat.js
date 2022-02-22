@@ -7,6 +7,10 @@ const submitBtn = document.getElementById("submitBtn");
 const output = document.getElementById("output");
 const feedback = document.getElementById("feedback");
 
+// we control here click process,if we have click ,
+//we have to connect to at server-socket,
+//in there we have to set up  bridge , in this way it goes from browser to server , from server to browser
+// first of all we have to send our socket information from here
 submitBtn.addEventListener("click", () => {
   socket.emit("chat", {
     message: message.value,
@@ -28,5 +32,5 @@ message.addEventListener("keypress", () => {
 });
 
 socket.on("typing", (data) => {
-  feedback.innerHTML = "<p>" + data + "typing....</p>";
+  feedback.innerHTML = "<p>" + data + " is typing....</p>";
 });

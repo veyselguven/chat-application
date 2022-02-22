@@ -8,16 +8,16 @@ const server = app.listen(port, () =>
   console.log(`server is running at ${port}`)
 );
 
-//
+//to manage our code in browser side
 app.use(express.static("public"));
 
 // the things runs from localhost 3000
 const io = socket(server);
 
-// i check the connection here if any connection happens it knows here
+// we  check the connection here if any connection happens it knows here
 io.on("connection", (socket) => {
   console.log(socket.id);
-
+  // we start here to listen the chat
   socket.on("chat", (data) => {
     // we have to send all data information to browser , we do that one by emit, we can send all our connection(browser)
     io.sockets.emit("chat", data);
