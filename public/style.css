@@ -17,13 +17,13 @@ h2 {
   font-size: 23px;
   padding: 10px 20px;
   color: #fff;
-  background-color: #0085ad;
+  background-color: #ad0000;
 }
 
 #chat-wrap {
   max-width: 600px;
   margin: 30px auto;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(170, 51, 15);
   border-radius: 5px;
 }
 
@@ -43,7 +43,7 @@ h2 {
 }
 
 #output strong {
-  color: #0085ad;
+  color: #00ad1d;
 }
 
 input {
@@ -58,7 +58,7 @@ input {
 
 button {
   font-family: "Poppins";
-  background-color: #0085ad;
+  background-color: #79ad00;
   color: #fff;
   border-radius: 0 0 5px 5px;
   width: 100%;
