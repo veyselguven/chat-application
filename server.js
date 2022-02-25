@@ -16,7 +16,7 @@ const io = socket(server);
 
 // we  check the connection here if any connection happens it knows here
 io.on("connection", (socket) => {
-  console.log(socket.id);
+  console.log("a user connected", socket.id);
   // we start here to listen the chat
   socket.on("chat", (data) => {
     // we have to send all data information to browser , we do that one by emit, we can send all our connection(browser)

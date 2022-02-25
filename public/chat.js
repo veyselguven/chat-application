@@ -23,7 +23,7 @@ submitBtn.addEventListener("click", () => {
 socket.on("chat", (data) => {
   feedback.innerHTML = "";
   output.innerHTML +=
-    "<p><strong>" + data.sender + ":</strong>" + data.message + "</p>";
+    "<p><strong>" + data.sender + ": </strong>" + data.message + "</p>";
   message.value = "";
 });
 
@@ -32,5 +32,5 @@ message.addEventListener("keypress", () => {
 });
 
 socket.on("typing", (data) => {
-  feedback.innerHTML = "<p>" + data + " is typing....</p>";
+  feedback.innerHTML = "<p>" + data + " is typing...</p>";
 });
